@@ -2,6 +2,8 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import "../App.css";
 import Footer from "../components/Footer";
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+import firebaseConfig from "../constants/firebaseCreds";
 
 export default function HomePage() {
     return (

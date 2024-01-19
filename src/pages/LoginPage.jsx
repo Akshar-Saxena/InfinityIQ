@@ -45,6 +45,7 @@ export default function LoginPage() {
                 element.data().email == email &&
                 element.data().password == password
             ) {
+                document.cookie = `token=${element.data().key}`;
                 navigate("/");
             }
         });
@@ -63,7 +64,7 @@ export default function LoginPage() {
                 </div>
             )}
             <ToastContainer />
-            <NavBar token={false} />
+            <NavBar token={document.cookie != "" ? true : false} />
             <div className="bg-[#414E9B] w-[40%] mt-[25%] rounded-lg shadow-[8px_8px_3px_0px_rgba(0,0,0,0.3)] -translate-y-1/2 m-auto flex flex-col justify-center items-center">
                 <h1 className="text-5xl text-[#ffa200] my-12">Login</h1>
                 <div className="flex flex-col">

@@ -63,7 +63,7 @@ export default function AddQuizPage() {
                     <DotLoader size={100} color="#ffa200" />
                 </div>
             )}
-            <div className="mt-[100px] w-[70%] m-auto">
+            <div className="mt-[100px] w-[70%] m-auto max-[550px]:w-[90%]">
                 <h1 className="text-5xl my-4">Create a Quiz</h1>
                 <div
                     style={{ outline: `${color.s}px solid ${color.c}` }}

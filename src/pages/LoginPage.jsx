@@ -65,18 +65,18 @@ export default function LoginPage() {
             )}
             <ToastContainer />
             <NavBar token={document.cookie != "" ? true : false} />
-            <div className="bg-[#414E9B] w-[40%] mt-[25%] rounded-lg shadow-[8px_8px_3px_0px_rgba(0,0,0,0.3)] -translate-y-1/2 m-auto flex flex-col justify-center items-center">
+            <div className="bg-[#414E9B] w-[40%] mt-[25%] rounded-lg shadow-[8px_8px_3px_0px_rgba(0,0,0,0.3)] -translate-y-1/2 m-auto max-[1130px]:mt-[40%] max-[1100px]:w-[60%] max-[750px]:mt-[60%] max-[550px]:mt-[90%] max-[450px]:w-[80%] flex flex-col justify-center items-center">
                 <h1 className="text-5xl text-[#ffa200] my-12">Login</h1>
                 <div className="flex flex-col">
                     <input
-                        className="px-4 w-[400px] py-2 my-2"
+                        className="px-4 w-[400px] max-[720px]:w-full py-2 my-2"
                         type="email"
                         placeholder="Enter your Email"
                         value={email}
                         onChange={emailHandler}
                     />
                     <input
-                        className="px-4 w-[400px] py-2 my-2"
+                        className="px-4 w-[400px] max-[720px]:w-full py-2 my-2"
                         type="password"
                         placeholder="Enter your Password"
                         value={password}

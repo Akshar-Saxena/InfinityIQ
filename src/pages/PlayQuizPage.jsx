@@ -34,7 +34,7 @@ export default function PlayQuizPage() {
     return (
         <div>
             <NavBar />
-            <div className="mt-[100px] w-[70%] m-auto">
+            <div className="mt-[100px] w-[70%] max-[500px]:w-[90%] max-[350px]:[95%] m-auto">
                 <h1 className="text-5xl my-4 text-[#4149be]">
                     {loadQuiz != undefined && loadQuiz.quizName}
                 </h1>
@@ -47,7 +47,7 @@ export default function PlayQuizPage() {
                         />
                     ))}
                 <button
-                    className="bg-[#414E9B] w-[200px] ml-[50%] -translate-x-1/2 mb-5 text-[#FFA200] px-5 py-2 rounded-md hover:shadow-md hover:shadow-[#FFA200]"
+                    className="bg-[#414E9B] w-[200px] ml-[50%] -translate-x-1/2 mb-5 text-[#FFA200] px-4 py-2 rounded-md hover:shadow-md hover:shadow-[#FFA200]"
                     onClick={() =>
                         navigate("/checkscore", {
                             state: { score: data.score },

@@ -81,7 +81,7 @@ export default function QuesCard(props) {
                     value={questionName}
                     onChange={quesNameHandler}
                 />
-                <div className="flex flex-col w-[35%]">
+                <div className="flex flex-col w-[35%] max-[840px]:w-1/2 max-[610px]:w-2/3 max-[400px]:w-full">
                     <input
                         disabled={state}
                         className="shadow-[3px_3px_3px_0px_rgba(0,0,0,0.3)] my-3 py-3 px-4 rounded-3xl"

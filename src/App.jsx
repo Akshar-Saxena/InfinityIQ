@@ -7,6 +7,8 @@ import AddQuizPage from "./pages/AddQuizPage";
 import AllQuizPage from "./pages/AllQuizPage";
 import PlayQuizPage from "./pages/PlayQuizPage";
 import CheckScore from "./pages/CheckScore";
+import AboutPage from "./pages/AboutPage";
+import RulesPage from "./pages/RulesPage";
 
 export default function App() {
     return (
@@ -19,6 +21,8 @@ export default function App() {
                 <Route exact path="/quizzes" element={<AllQuizPage />} />
                 <Route exact path="/play" element={<PlayQuizPage />} />
                 <Route exact path="/checkscore" element={<CheckScore />} />
+                <Route exact path="/about" element={<AboutPage />} />
+                <Route exact path="/rules" element={<RulesPage />} />
             </Routes>
         </Router>
     );

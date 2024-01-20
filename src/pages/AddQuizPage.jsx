@@ -8,11 +8,13 @@ import { DotLoader } from "react-spinners";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import firebaseConfig from "../constants/firebaseCreds";
+import { useNavigate } from "react-router-dom";
 
 export default function AddQuizPage() {
     const [no, setNo] = useState(1);
     const [quizName, setQuizName] = useState("");
     const [desc, setDesc] = useState("");
+    const navigate = useNavigate();
     const [color, setColor] = useState({ s: "1", c: "black" });
     const increment = () => {
         setNo((prev) => prev + 1);
@@ -43,6 +45,7 @@ export default function AddQuizPage() {
                 content: data,
             });
             setIsSaving(false);
+            navigate("/quizzes");
         }
     };
     useEffect(() => {

@@ -19,9 +19,6 @@ export default function PlayQuizPage() {
             if (element.id == location.state.token) {
                 setLoadQuiz(element.data());
                 let temp = element.data();
-                // element.data().forEach((element) => {
-                //     console.log(element);
-                // });
             }
         });
     };

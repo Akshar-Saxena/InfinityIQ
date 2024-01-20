@@ -46,7 +46,12 @@ export default function HomePage() {
                         </h1>
                     </div>
                     <div className="bg-gray-200 my-4 rounded-xl shadow-md hover:shadow-[#414E9B] cursor-pointer flex flex-col justify-center items-center w-[200px] h-[200px]">
-                        <img className="w-[70px]" src="/play.png" alt="" />
+                        <img
+                            className="w-[70px]"
+                            src="/play.png"
+                            alt=""
+                            onClick={() => navigate("/quizzes")}
+                        />
                         <h1 className="text-3xl text-[#FFA200]">Play a quiz</h1>
                     </div>
                 </div>

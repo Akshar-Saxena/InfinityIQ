@@ -61,7 +61,7 @@ export default function NavBar(props) {
                     )}
                 </div>
             )}
-            {props.token == false ? (
+            {document.cookie == "" ? (
                 <button
                     className="bg-[#414E9B] max-[850px]:hidden text-[#FFA200] px-5 py-4 rounded-md hover:shadow-md hover:shadow-[#FFA200]"
                     onClick={() => navigate("/login")}

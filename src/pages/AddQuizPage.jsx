@@ -54,6 +54,9 @@ export default function AddQuizPage() {
         } catch (e) {
             null;
         }
+        if (document.cookie == "") {
+            navigate("/login");
+        }
     }, []);
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);

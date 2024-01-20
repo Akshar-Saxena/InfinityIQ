@@ -26,6 +26,8 @@ export default function AllQuizPage() {
     useEffect(() => {
         if (document.cookie != "") {
             getQuiz();
+        } else {
+            navigate("/login");
         }
     }, []);
     const app = initializeApp(firebaseConfig);

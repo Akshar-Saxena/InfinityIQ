@@ -1,6 +1,7 @@
 import React from "react";
 import "../App.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function NavBar(props) {
     const navigate = useNavigate();
@@ -18,7 +19,9 @@ export default function NavBar(props) {
             />
             <ul className="flex w-[20%] justify-between items-center">
                 <li className="cursor-pointer text-[#414E9B]">About</li>
-                <li className="cursor-pointer text-[#414E9B]">Quizzes</li>
+                <Link to="/quizzes">
+                    <li className="cursor-pointer text-[#414E9B]">Quizzes</li>
+                </Link>
                 <li className="cursor-pointer text-[#414E9B]">Rules</li>
             </ul>
             {props.token == false ? (

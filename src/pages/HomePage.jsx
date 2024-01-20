@@ -4,8 +4,10 @@ import "../App.css";
 import Footer from "../components/Footer";
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
 import firebaseConfig from "../constants/firebaseCreds";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
+    const navigate = useNavigate();
     return (
         <div>
             <NavBar token={document.cookie != "" ? true : false} />
@@ -30,7 +32,10 @@ export default function HomePage() {
             <div className="pb-[100px]">
                 <h1 className="text-5xl text-center my-10">Quizzes</h1>
                 <div className="flex w-[50%] m-auto justify-between">
-                    <div className="bg-gray-200 rounded-xl shadow-md hover:shadow-[#414E9B] cursor-pointer flex flex-col justify-center items-center w-[200px] h-[200px]">
+                    <div
+                        className="bg-gray-200 rounded-xl shadow-md hover:shadow-[#414E9B] cursor-pointer flex flex-col justify-center items-center w-[200px] h-[200px]"
+                        onClick={() => navigate("/add")}
+                    >
                         <img className="w-[70px]" src="/add.png" alt="" />
                         <h1 className="text-3xl text-[#FFA200]">
                             Create a quiz
